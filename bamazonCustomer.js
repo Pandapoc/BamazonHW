@@ -52,7 +52,7 @@ const choice = () => {
             db.query(`select stock_quantity from products where product_name = ?`,[`${item}`],(e, data) => {
                 if (e) { console.log(e) }
                 else {
-                    let dbquantity = data[0].stock_quantity
+                    let dbquantity = parseInt(data[0].stock_quantity)
                     if (quantity > dbquantity) {
                         console.log(`Sorry We don't have enough in stock!`)
                         choice()
