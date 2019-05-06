@@ -57,7 +57,7 @@ const choice = () => {
                     let dbquantity = data[0].stock_quantity
                     if (quantity > dbquantity) {
                         console.log(`Sorry We don't have enough in stock!`)
-                        quantity()
+                        choice()
                     } else {
                         dbquantity -= quantity
                         console.log(dbquantity)
