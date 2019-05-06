@@ -1,4 +1,4 @@
 # BamazonHW
-![oops](./pictures/temp1)
-![oops](./pictures/temp2)
-![oops](./pictures/temp3)
+![image](pictures/temp1.png)
+![image](pictures/temp2.png)
+![image](pictures/temp3.png)
