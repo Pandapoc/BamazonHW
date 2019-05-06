@@ -1,7 +1,5 @@
 const { createConnection } = require('mysql2')
 const { prompt } = require('inquirer')
-let idArr = []
-let itemArr = []
 
 const db = createConnection({
     host: 'localhost',
