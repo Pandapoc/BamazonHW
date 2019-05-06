@@ -47,7 +47,7 @@ const choice = () => {
         .then(answers => {
           let tempArr = answers.item.split(' ')
           let item = tempArr[1]
-          let quantity = answers.quantity
+          let quantity = parseInt(answers.quantity)
             console.log(`You want to buy ${quantity} of ${item}`)
             db.query(`select stock_quantity from products where product_name = ?`,[`${item}`],(e, data) => {
                 if (e) { console.log(e) }

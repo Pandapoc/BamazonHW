@@ -107,7 +107,7 @@ const addInventory = () => {
             let tempArr = answers.choice.split(' ')
             let item = tempArr[0]
             let dbquantity = tempArr[1]
-            let quantity = answers.stock
+            let quantity = parseInt(answers.stock)
             let sum = answers.stock + dbquantity
             db.query(`update products set stock_quantity = ? where product_name = ?`,[sum, item], (e,r) => {
                 if (e) { console.log(e) }
