@@ -104,12 +104,4 @@ const quantity = () => {
       })
 }
 
-const checker = () => {
-
-}
-
-const buyer = () => {
-
-}
-
 init()
