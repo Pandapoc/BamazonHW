@@ -72,31 +72,4 @@ const choice = () => {
     })
 }
 
-
-
-const quantity = () => {
-    prompt({
-        type: 'input',
-        name: 'quantity',
-        message: 'How many would you like to buy?'
-      })
-      .then(answers =>{
-        let quantity = answers.quantity
-        console.log(`You want to buy ${quantity} of ${item}`)
-        db.query(`select stock_quantity from products where product_name = ?`,[item],(e, data) => {
-            if (e) { console.log(e) }
-            else {
-                if (quantity > data) {
-                    console.log(`Sorry We don't have enough in stock!`)
-                    quantity()
-                } else {
-                    db.query(`update products set product_quantity = ? where product_name = ?`,[data-quantity],[item], (e, data) => {
-                        console.log(`you have successfully bought ${quantity} ${items}s`)
-                    })
-                }
-            }
-        })
-      })
-}
-
 init()
